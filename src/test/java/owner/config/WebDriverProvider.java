@@ -33,8 +33,6 @@ public class WebDriverProvider implements Supplier<WebDriver> {
     }
     private WebDriver createWebDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        System.out.println(config.getRemoteURL());
-        System.out.println(config.getBrowser());
         if (Objects.isNull(config.getRemoteURL())) {
             switch (config.getBrowser()) {
                 case CHROME: {
